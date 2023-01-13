@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
           ),
           Center(
             child: Text('4K Wallpaper',
-                style: GoogleFonts.athiti(
+                style: GoogleFonts.kalam(
                   textStyle: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 45,

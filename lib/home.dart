@@ -181,13 +181,13 @@ class HomeState extends State<Home> {
                           if (index % 10 == 9) {
                             return SizedBox(
                               height: 600,
-                              child: isLoaded
-                                  ? AdWidget(
-                                      ad: nativeAd!,
-                                    )
-                                  : const Center(child: Text("Ad is Loading...")
-                                      // CircularProgressIndicator()
-                                      ),
+                              // child: isLoaded
+                              //     ? AdWidget(
+                              //         ad: nativeAd!,
+                              //       )
+                              //     : const Center(child: Text("Ad is Loading...")
+                              //         // CircularProgressIndicator()
+                              //         ),
                             );
                           } else {
                             return GestureDetector(

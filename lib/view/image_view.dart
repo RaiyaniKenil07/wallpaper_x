@@ -80,9 +80,6 @@ class ImageViewState extends State<ImageView> {
                     children: [
                       InkWell(
                           onTap: () {
-                            // SocialShare.shareOptions(
-                            //     "https://pub.dev/packages/flutter_share/example-+");
-                            // FlutterShare.share(text: "https://pub.dev/packages/flutter_share/example-+");
                             Fluttertoast.showToast(
                               msg: "Photo Saved",
                               toastLength: Toast.LENGTH_LONG,
@@ -95,7 +92,7 @@ class ImageViewState extends State<ImageView> {
                             if (kIsWeb) {
                               _launchURL(widget.imgPath);
                             } else {
-                              _save();
+                              saveed();
                             }
                           },
                           child: Container(
@@ -115,7 +112,7 @@ class ImageViewState extends State<ImageView> {
                                       end: FractionalOffset.bottomRight)),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
+                                children: [
                                   Icon(
                                     Icons.download_for_offline_outlined,
                                     color: Colors.white60,
@@ -412,7 +409,7 @@ class ImageViewState extends State<ImageView> {
     ).show();
   }
 
-  _save() async {
+  saveed() async {
     await _askPermission();
     var response = await Dio().get(widget.imgPath,
         options: Options(responseType: ResponseType.bytes));
